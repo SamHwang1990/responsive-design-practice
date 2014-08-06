@@ -352,6 +352,9 @@ main{
 	margin-left: .5rem;
 	font-size: 100%;
 }
+img.skill-icon{
+	height:8rem;
+}
 /* endregion*/
 
 /* region component style*/
@@ -364,6 +367,12 @@ div.fix-fixed{
 	max-width: 960px;
 	min-width: 200px;
 	margin: 0 auto;
+}
+.row-fluid [class*="span"].row-no-padding{
+	padding: 0;
+}
+.row-fluid [class*="span"].row-no-margin{
+	margin:0;
 }
 .row-fluid [class*="span"].row-center{
 	margin-left: auto;
@@ -396,5 +405,21 @@ div.fix-fixed{
 .color-scheme-white h6{
 	color:#204056;
 	font-weight: normal;
+}
+.color-scheme-white a:not(.btn){
+	color: #204056;
+}
+/* endregion */
+
+/* region margin padding scheme */
+.margin-top-bottom-1{
+	margin-bottom: 1rem !important;
+	margin-top: 1rem !important;
+}
+.margin-top-1{
+	margin-top:1rem !important;
+}
+.margin-bottom-1{
+	margin-bottom: 1rem !important;
 }
 /* endregion */
