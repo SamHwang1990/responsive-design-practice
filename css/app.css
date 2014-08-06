@@ -1,0 +1,400 @@
+/***********************************************
+ * Created by samhwang1990@gmail.com on 14-8-6.
+ ***********************************************/
+
+/*Frame Set Begin*/
+html,body{
+	height:100%;
+	padding: 0;
+	margin: 0;
+}
+html{
+	padding-top: 33px;
+	box-sizing: border-box;
+}
+
+/* region CRM Section */
+
+/* signIn Begin */
+body#body-signin {
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: #f5f5f5;
+}
+
+.appLogo-signin{
+	display: block;
+	margin: 0 auto;
+}
+
+.form-signin {
+	max-width: 300px;
+	padding: 19px 29px 29px;
+	margin: 20px auto 20px;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+	box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin .form-signin-heading{
+	font-size: 24px;
+	font-weight: normal;
+}
+.form-signin input[type="text"],
+.form-signin input[type="password"] {
+	font-size: 16px;
+	height: auto;
+	margin-bottom: 15px;
+	padding: 7px 9px;
+}
+#signin-error{
+	display: none;
+	width: 330px;
+	margin: 10px auto 0px;
+	padding: 12px;
+	border: 0;
+	background: #fff;
+	border-left: 4px solid #dd3d36;
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+/* signIn End*/
+#appWrap{
+	height: auto;
+	min-height: 100%;
+	width: 100%;
+	position: relative;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+#adminMenuBack, #adminMenuWrap, #adminMenu{
+	background-color: #222;
+}
+.app-has-subMenu .app-subMenu{
+	background-color: #333;
+}
+
+#adminMenuBack {
+	width:160px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	/*z-index: -1;*/
+}
+#adminMenuWrap{
+	width:160px;
+	float: left;
+	position: fixed;
+	margin-top: 10px;
+	z-index: 99;
+}
+#adminMenuWrap>.adminMenu{
+	width: 160px;
+	margin: 0;
+	padding: 0;
+}
+
+#appContent{
+	height: 100%;
+	margin-left: 180px;
+	position: relative;
+	float: left;
+}
+
+#appAdminBar{
+	direction: ltr;
+	height: 34px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-width: 600px;
+	z-index: 99999;
+	background: #222;
+	margin-bottom: 0;
+}
+#appBody{
+	position: relative;
+	color: #444;
+}
+#appBody-content{
+	padding-bottom: 65px;
+	float: left;
+	width: 100%;
+	overflow: visible;
+}
+#appBody-content .wrap{
+	margin: 10px 20px 0 2px;
+}
+#appFooter{
+	margin-left: 180px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px 0;
+	margin-right: 20px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	color: #777;
+	border-color: transparent;
+}
+/*Frame Set End*/
+
+/*More Icon Class Begin*/
+.icon-role{
+	background-image:url("../../Content/images/icon/role.png");
+	background-position: 0px 0px;
+}
+.icon-role-white{
+	background-image:url("../../Content/images/icon/role-white.png");
+	background-position: 0px 0px;
+}
+/*More Icon Class End*/
+
+/*Admin Bar Begin*/
+.navbar .brand{
+	padding: 2px 0 0 0;
+	margin-left: -5px;
+}
+.navbar .editUser{
+	display: block;
+	padding: 5px;
+	color: #fff;
+	text-decoration: none;
+}
+/*Admin Bar End*/
+
+/*Admin Menu Begin*/
+.adminMenu>li{
+	position: relative;
+	min-height: 34px;
+	cursor: pointer;
+}
+.adminMenu>li>a{
+	position: relative;
+	line-height: 34px;
+}
+.adminMenu>li a,.app-subMenu a{
+	display: block;
+	margin: 0;
+	text-shadow: none;
+	color: #eee;
+}
+.adminMenu>li>a:hover,.app-subMenu a:hover,#collapse-menu:hover{
+	text-decoration: none;
+	color: #53c3ed;
+}
+.adminMenu>li>a:hover,.adminMenu>.app-subMenu-open>a{
+	background-color: #000;
+}
+.app-not-current-subMenu .app-subMenu{
+	list-style: none;
+	position: absolute;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin: 0;
+	z-index: 9999;
+	top: -1000em;
+	left: 160px;
+	width: auto;
+	min-width: 160px;
+	overflow: visible;
+	word-wrap: break-word;
+}
+.app-subMenu-open .app-subMenu{
+	top: -1px;
+	background-color: #333;
+}
+.app-has-current-subMenu .app-subMenu,.app-has-current-subMenu:hover .app-subMenu{
+	position: relative;
+	z-index: 3;
+	top: auto;
+	left: auto;
+	right: auto;
+	bottom: auto;
+	margin: 0;
+	width: auto;
+	min-width: 160px;
+	border: 0 none;
+	margin-top: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+.adminMenu>.app-menu-open>a,.adminMenu>.app-menu-open>a:hover{
+	color: #fff;
+	background-color: #0074a2;
+}
+.app-subMenu-open>a:after,.app-menu-open>a:after{
+	right: 0;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-width: 8px;
+	top: 50%;
+	margin-top: -8px;
+}
+.app-subMenu-open>a:after{
+	border-right-color:#333;
+}
+.app-menu-open>a:after{
+	border-right-color: #f1f1f1;
+}
+.app-subMenu li{
+	min-height: 30px;
+	line-height: 30px;
+	background-color: #333;
+	cursor: pointer;
+}
+.app-subMenu li a{
+	padding-left: 15px;
+}
+#collapse-menu{
+	margin-top: 15px;
+	color: #eee;
+}
+#collapse-menu div{
+	float: left;
+	margin-left: 15px;
+}
+/*Admin Menu End*/
+
+/**
+* @section structure style
+*/
+fieldset{
+	margin-bottom: 20px;
+}
+
+/**
+* @section component style
+*/
+.feedbackMsg{
+	display: none;
+}
+fieldset.contactItem,fieldset.flashPointItem{
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgb(204, 204, 204);
+}
+.btnAddEasyChat{
+	margin-top: 10px;
+}
+div.easyChat-wrap{
+	margin-top: 10px;
+}
+input.display,.form-horizontal .display,.display{
+	display: none;
+}
+
+/*
+* @section feedbackMsg Class style
+*/
+.inputInvalid{
+	display: block;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+}
+
+/*
+* @section FirstInterviewReg Class style
+*/
+.HasLangTranWrap,.TFIELTSWrap,.SATSSATWrap,.Sat2Wrap,.APWrap,.GREGMATWrap{
+	margin-top: 5px;
+}
+
+/* endregion */
+
+/* region ApplyFrame Section */
+article, aside, section{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	/*word-break:break-all;*/
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	background-color:#f1f2f2;
+	zoom: 1;
+}
+main{
+	min-height: 100%;
+	box-sizing: border-box;
+	display: block;
+}
+.app-apply{
+	padding-top: 3rem !important;
+	padding-bottom: 3rem !important;
+}
+.app-apply .app-apply-copy h1{
+	margin-bottom: 1rem !important;
+}
+.app-apply-action{
+	margin-bottom: 1rem !important;
+	margin-top: 1rem !important;
+}
+.app-apply .app-apply-action .btn[value] .app-apply-action-process:after {
+	content: "(" attr(value) ")";
+	margin-left: .5rem;
+	font-size: 100%;
+}
+/* endregion*/
+
+/* region component style*/
+article.fit-full{
+	width: 100%;
+}
+div.fix-fixed{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	max-width: 960px;
+	min-width: 200px;
+	margin: 0 auto;
+}
+.row-fluid [class*="span"].row-center{
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+}
+.row-fluid [class*="span"].row-align-center{
+	text-align: center;
+}
+.btn.btn-fillspace{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+/* endregion*/
+
+/* region color scheme */
+.color-scheme-white{
+	color: #666;
+	background-color: #fff;
+}
+.color-scheme-white h1,
+.color-scheme-white h2,
+.color-scheme-white h3,
+.color-scheme-white h4,
+.color-scheme-white h5,
+.color-scheme-white h6{
+	color:#204056;
+	font-weight: normal;
+}
+/* endregion */
