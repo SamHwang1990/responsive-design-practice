@@ -347,8 +347,24 @@ main{
 	margin-bottom: 1rem !important;
 	margin-top: 1rem !important;
 }
-img.skill-icon{
+.app-apply-action-progress:after{
+	content: "(" attr(value) ")";
+	margin-left: .5rem;
+	font-size: 100%;
+}
+img.stage-icon{
 	height:8rem;
+}
+
+.app-apply-syllabus.leadin{
+	padding-top: 2rem !important;
+	position: relative;
+}
+.app-apply-syllabus .app-apply-syllabus-leadin{
+	position: absolute;
+	top: -2px;
+	left: 50%;
+	margin-left: -32px;
 }
 
 .app-apply-syllabus .app-apply-syllabus-topics{
@@ -614,6 +630,9 @@ article.fix-fixed,div.fix-fixed{
 .app-btn-success{
 	background-color: #39d1b4;
 	color: #fff !important;
+}
+.app-btn-success:hover{
+	background-color: #3fe0c5;
 }
 .app-btn-large{
 	font-size: 18px;
