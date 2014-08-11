@@ -371,13 +371,19 @@ img.skill-icon{
 
 .app-apply-syllabus-topic .app-apply-syllabus-stage{
 	position: relative;
-	cursor: pointer;
 	display: table;
 	width: 100%;
 	height: 8rem;
+	cursor: default;
 	border-bottom: 1px solid transparent;
 	background-clip: padding-box;
+	opacity: 0.5;
 }
+.app-apply-syllabus-topic[data-state-topic="active"] .app-apply-syllabus-stage[data-state-stage="active"]{
+	cursor: pointer;
+	opacity: 1;
+}
+
 .app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-process{
 	display: table-cell;
 	vertical-align: middle;
@@ -405,11 +411,14 @@ img.skill-icon{
 	left: 0;
 	width: 100%;
 	height: 1rem;
-	padding-top: 2px;
 	margin-top: -0.5rem;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	line-height: 1rem;
 	text-align: center;
+}
+.app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle[value="100%"]:after{
+	font-size: 2rem;
+	content: "\2713";
 }
 
 .app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-description{
@@ -510,24 +519,24 @@ article.fix-fixed,div.fix-fixed{
 .cell-row{
 	position: relative;
 }
-.cell-row:hover{
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover{
 	background-color: #39d1b4;
 	color: #fff !important;
 }
-.cell-row:hover h1,
-.cell-row:hover h2,
-.cell-row:hover h3,
-.cell-row:hover h4,
-.cell-row:hover h5,
-.cell-row:hover h6,
-.cell-row:hover p{
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover h1,
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover h2,
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover h3,
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover h4,
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover h5,
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover h6,
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover p{
 	color: #fff;
 }
 
-.cell-row:hover .app-apply-syllabus-stage-process span{
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover .app-apply-syllabus-stage-process span{
 	background-color: #fff !important;
 }
-.cell-row:hover .app-apply-syllabus-stage-process span:after{
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover .app-apply-syllabus-stage-process span:after{
 	color: #39d1b4;
 }
 
@@ -537,10 +546,17 @@ article.fix-fixed,div.fix-fixed{
 	top: 50%;
 	margin-top: -10px;
 }
-.table-row:hover .table-row-right-arrow i,.cell-row:hover .cell-row-right-arrow i{
+.table-row:hover .table-row-right-arrow i,
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]:hover .cell-row-right-arrow i{
 	background-image: url("bootstrap/img/glyphicons-halflings-white.png");
 }
 
+.cell-row>a.link-target{
+	cursor: default;
+}
+.app-apply-syllabus-topic[data-state-topic="active"] .cell-row[data-state-stage="active"]>a.link-target{
+	cursor: pointer;
+}
 
 .table-row>a.link-target, .cell-row>a.link-target {
 	position: absolute;
@@ -612,6 +628,18 @@ article.fix-fixed,div.fix-fixed{
 	text-align: center;
 	padding-left: 0;
 	padding-right: 0;
+}
+
+.link-area{
+	position: relative;
+	cursor: pointer;
+}
+.link-area>a.link-target {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 /* endregion*/
 
