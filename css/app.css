@@ -362,6 +362,7 @@ img.skill-icon{
 	text-align: center;
 	font-size: 24px;
 	font-weight: normal;
+	color: #204056;
 }
 .app-apply-syllabus-topic:first-of-type h2{
 	padding-top: 1rem !important;
@@ -463,10 +464,11 @@ article.fix-fixed,div.fix-fixed{
 }
 .tabs .tab{
 	box-sizing: border-box;
-	font-size: 1rem;
+	font-size: 0.9rem;
 	white-space: nowrap;
 	display: inline-block;
 	height: 3.125rem;
+	letter-spacing: 0.05rem;
 }
 .tab-body{
 	display: none;
@@ -533,8 +535,13 @@ article.fix-fixed,div.fix-fixed{
 	position: absolute;
 	right: 20px;
 	top: 50%;
-	margin-top: -8px;
+	margin-top: -10px;
 }
+.table-row:hover .table-row-right-arrow i,.cell-row:hover .cell-row-right-arrow i{
+	background-image: url("bootstrap/img/glyphicons-halflings-white.png");
+}
+
+
 .table-row>a.link-target, .cell-row>a.link-target {
 	position: absolute;
 	top: 0;
@@ -626,7 +633,7 @@ article.fix-fixed,div.fix-fixed{
 	color: #666;
 }
 .color-scheme-white a:not(.btn){
-	color: #34678b;
+	color: #444;
 	text-decoration: none;
 }
 .color-scheme-white .app-progress .progress-bar{
@@ -658,7 +665,7 @@ article.fix-fixed,div.fix-fixed{
 .tabs-color-scheme-darkgrey .tab[data-state="inactive"]{
 	background: #f1f2f2;
 }
-.tabs-color-scheme-darkgrey .tab[data-state="active"],.tabs-color-scheme-darkgrey .tab:hover{
+.tabs-color-scheme-darkgrey .tab[data-state="active"], .tabs-color-scheme-darkgrey .tab:hover{
 	background: #e6e7e8;
 }
 
