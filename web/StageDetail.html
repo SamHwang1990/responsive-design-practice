@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ClientManage_StageDetail</title>
+    <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/app.css">
+    <script type="text/javascript" src="../js/libs/jquery/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../css/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/stageDetail.js"></script>
+</head>
+<body>
+    <div class="stage-detail-container">
+        <!-- stage nav -->
+        <header id="stages-header" exclude="phone">
+            <article id="stages-header-nav-container" class="fix-fixed row-fluid">
+                <div id="stages-header-nav-content" class="span12 row-fluid">
+                    <ul class="nav nav-dots">
+                        <li class="dot dot-home">
+                            <a href="javascript:void(0)">
+                                &#171;
+                            </a>
+                            <div style="position:relative;">
+                                <aside><i class="icon-home icon-white"></i> Back To Stage Home</aside>
+                            </div>
+                        </li>
+                        <li class="js-dot dot" data-state="completed current">
+                            <a></a>
+                            <div style="position:relative;">
+                                <aside>Try it out: CSS</aside>
+                            </div>
+                        </li>
+                        <li class="js-dot dot" data-state="completed">
+                            <a></a>
+                            <div style="position:relative;">
+                                <aside>Try it out: CSS</aside>
+                            </div>
+                        </li>
+                        <li class="js-dot dot">
+                            <a></a>
+                            <div style="position:relative;">
+                                <aside><i class="icon-lock icon-white"></i> Try it out: CSS</aside>
+                            </div>
+                        </li>
+                        <li class="js-dot dot" data-state="completed">
+                            <a></a>
+                            <div style="position:relative;">
+                                <aside>Try it out: CSS</aside>
+                            </div>
+                        </li>
+                        <li class="js-dot dot" data-state="completed">
+                            <a></a>
+                            <div style="position:relative;">
+                                <aside>Try it out: CSS</aside>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </header>
+        <main id="stage-detail-container">
+            <article class="stage-detail-content"></article>
+            <section class="stage-detail-control fit-full">
+                <div class="fix-fixed row-fluid">
+                    <section class="span2">
+                        <button class="stage-detail-control-prev app-btn app-btn-transparent app-btn-large btn-round btn-fillspace">
+                            <span exclude="phone">GO BACK</span>
+                            <span exclude="desktop"><i class="icon-chevron-lef icon-white"></i> </span>
+                        </button>
+                    </section>
+                    <section class="span8"></section>
+                    <section class="span2">
+                        <button class="stage-detail-control-next app-btn app-btn-success app-btn-large btn-round btn-fillspace" state="disabled">
+                            <ul>
+                                <li><span exclude="phone">&#10003;</span></li>
+                                <li><span exclude="phone">GOT IT</span></li>
+                            </ul>
+                            <span exclude="desktop">&#10003;</span>
+                            <aside class="cta" exclude="phone"><span>Please interact with the card first</span></aside>
+                        </button>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
