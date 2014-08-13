@@ -486,28 +486,95 @@ img.stage-icon{
 	padding-bottom: 1em;
 	background-color: rgba(32,64,86,0.7) !important;;
 }
+.stage-detail-content{
+	box-sizing: border-box;
+	min-height: 10rem;
+}
+.stage-detail-controls{
+	height: 3rem;
+}
+.stage-detail-controls .control-section{
+	position: relative;
+	height: 100%;
+	margin-left: 0;
+	overflow: hidden;
+}
+.control-section .app-btn.btn-fillspace[state="disabled"] aside.cta{
+	position: absolute;
+	background: #204056;
+	color: #fff;
+	border: 0;
+	z-index: 1000001;
+	text-align: center;
+	display: none;
+	min-height: 3rem;
+	padding: 0 1rem;
+	line-height: 3.25rem;
+	right: 100%;
+	margin-right: 1rem;
+	width: 16rem;
+	top: 0;
+	font-size: .8rem;
+	text-transform: lowercase;
+}
+.control-section .app-btn.btn-fillspace[state="disabled"]:hover aside.cta{
+	display: block;
+}
+.control-section .app-btn.btn-fillspace[state="disabled"]:hover aside.cta:after{
+	content: '';
+	position: absolute;
+	height: 0;
+	width: 0;
+	border-color: transparent transparent transparent #204056 ;
+	border-style: solid;
+	border-width: 1em;
+	right: -1.5rem;
+	top: .8rem;
 
+}
 /* endregion*/
 
 /* region component style*/
-@media screen and (max-width: 735px) and (min-width: 0){
+@media screen and (max-width: 767px) and (min-width: 0){
 	[exclude~="phone"] {
 		display: none !important;
 	}
-	.stage-detail-control-prev {
+
+	.card-nav{
 		padding-right: 1rem !important;
 		padding-left: 1rem !important;
 		position: fixed;
 		height: 3rem !important;
 		width: auto !important;
+		bottom: 3rem;
 		border: 0;
 		line-height: 0rem !important;
+	}
+
+    .card-nav-prev{
+	    left: 0;
+	    border-radius: 0 1.5rem 1.5rem 0 !important;
+    }
+
+	.card-nav-next{
+		right: 0;
+		border-radius: 1.5rem 0 0 1.5rem !important;
 	}
 }
 
 @media screen and (min-width: 960px){
 	[exclude~="desktop"] {
 		display: none !important;
+	}
+}
+
+@media screen and (min-width:768px) and (max-width:959px){
+	[exclude~="tablet"]{
+		display:none !important
+	}
+	.stage-detail-controls{
+		padding-left: 1rem !important;
+		padding-right: 1rem !important;
 	}
 }
 
@@ -687,8 +754,13 @@ article.fix-fixed,div.fix-fixed,section.fix-fixed{
 	background-color: #39d1b4;
 	color: #fff !important;
 }
-.app-btn-success:hover{
+.app-btn-success:not([state="disabled"]):hover{
 	background-color: #3fe0c5;
+}
+
+.app-btn-success[state="disabled"]{
+	background-color: rgba(57, 209, 180,.3);
+	color: rgba(255,255,255,.3) !important;
 }
 
 .app-btn-transparent{
@@ -786,7 +858,7 @@ article.fix-fixed,div.fix-fixed,section.fix-fixed{
 	left: 6.5em;
 }
 
-.nav-dots .dot a:hover{
+.nav-dots .dot:hover a{
 	background-color: #bcbec0;
 	border-color: #bcbec0;
 }
@@ -803,7 +875,7 @@ article.fix-fixed,div.fix-fixed,section.fix-fixed{
 	background: 0;
 	background-clip: border-box;
 }
-.nav-dots .dot-home a:hover{
+.nav-dots .dot-home:hover a{
 	background: none;
 	cursor: pointer;
 	color: #39d1b4;
@@ -817,9 +889,30 @@ article.fix-fixed,div.fix-fixed,section.fix-fixed{
 	background-color: #62dbc4;
 	cursor: pointer;
 }
-.nav-dots .dot[data-state~="completed"] a:hover{
+.nav-dots .dot[data-state~="completed"]:hover a{
 	border-color: #62dbc4;
 	background-color: #62dbc4;
+}
+
+.card-nav.card-nav-next ul{
+	list-style: none;
+	transition: top .2s;
+	padding-left: 0;
+	position: relative;
+	top: -3rem;
+	margin-left: 0;
+	margin-bottom: 0;
+}
+.card-nav.card-nav-next:not([state="disabled"]):hover ul{
+	top: 0;
+}
+.card-nav.card-nav-next ul li{
+	line-height: 3rem;
+	left: 0;
+	font-size: 1.125rem;
+}
+.card-nav.card-nav-next:not([state="disabled"]):hover ul li{
+	font-size: 1.7rem;
 }
 /* endregion*/
 

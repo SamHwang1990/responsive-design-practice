@@ -60,23 +60,37 @@
         </header>
         <main id="stage-detail-container">
             <article class="stage-detail-content"></article>
-            <section class="stage-detail-control fit-full">
+            <section class="stage-detail-controls fit-full">
                 <div class="fix-fixed row-fluid">
-                    <section class="span2">
-                        <button class="stage-detail-control-prev app-btn app-btn-transparent app-btn-large btn-round btn-fillspace">
+                    <section class="control-section span2">
+                        <button
+                                class="stage-detail-control-prev
+                                app-btn app-btn-transparent
+                                app-btn-large
+                                btn-round
+                                btn-fillspace
+                                card-nav card-nav-prev">
                             <span exclude="phone">GO BACK</span>
-                            <span exclude="desktop"><i class="icon-chevron-lef icon-white"></i> </span>
+                            <span exclude="desktop tablet"><i class="icon-chevron-left icon-white"></i> </span>
                         </button>
                     </section>
                     <section class="span8"></section>
-                    <section class="span2">
-                        <button class="stage-detail-control-next app-btn app-btn-success app-btn-large btn-round btn-fillspace" state="disabled">
+                    <section class="control-section span2">
+                        <button
+                                class="stage-detail-control-next
+                                app-btn
+                                app-btn-success
+                                app-btn-large
+                                btn-round
+                                btn-fillspace
+                                card-nav card-nav-next"
+                                state="">
                             <ul>
                                 <li><span exclude="phone">&#10003;</span></li>
                                 <li><span exclude="phone">GOT IT</span></li>
                             </ul>
-                            <span exclude="desktop">&#10003;</span>
-                            <aside class="cta" exclude="phone"><span>Please interact with the card first</span></aside>
+                            <span exclude="desktop tablet">&#10003;</span>
+                            <aside class="cta" exclude="phone"><span>Please complete current card first</span></aside>
                         </button>
                     </section>
                 </div>
