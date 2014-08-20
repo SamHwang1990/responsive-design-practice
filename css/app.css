@@ -352,6 +352,11 @@ main{
 	margin-left: .5rem;
 	font-size: 100%;
 }
+.app-apply-action-progress[value='100%']:after{
+	content: "\2713";
+	margin-left: .5rem;
+	font-size: 100%;
+}
 img.stage-icon{
 	height:8rem;
 }
@@ -400,7 +405,7 @@ img.stage-icon{
 	opacity: 1;
 }
 
-.app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-process{
+.app-apply-syllabus-stage-process{
 	display: table-cell;
 	vertical-align: middle;
 	width: 20%;
@@ -408,18 +413,18 @@ img.stage-icon{
 	text-align: center;
 }
 
-.app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle {
+.app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle {
 	display: inline-block;
 	position: relative;
 	width: 3rem;
 	height: 3rem;
 	border-radius: 50%;
 }
-.app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle:not([value="0%"]){
+.app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle:not([value="0%"]){
 	background-color: #39d1b4;
 	color: white;
 }
-.app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle:after{
+.app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle:after{
 	content: attr(value);
 	display: inline-block;
 	position: absolute;
@@ -432,12 +437,12 @@ img.stage-icon{
 	line-height: 1rem;
 	text-align: center;
 }
-.app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle[value="100%"]:after{
+.app-apply-syllabus-stage-process span.app-apply-syllabus-process-circle[value="100%"]:after{
 	font-size: 2rem;
 	content: "\2713";
 }
 
-.app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-description{
+.app-apply-syllabus-stage-description{
 	padding-top: 0.5rem !important;
 	padding-bottom: 0.5rem !important;
 	padding-right: 5rem !important;
@@ -448,7 +453,7 @@ img.stage-icon{
 	height: 100%;
 	font-size: 14px;
 }
-.app-apply-syllabus-topic .app-apply-syllabus-stage .app-apply-syllabus-stage-description h3{
+.app-apply-syllabus-stage-description h3{
 	margin-bottom: 0;
 	font-size: 18px;
 }
@@ -761,6 +766,12 @@ article.fix-fixed,div.fix-fixed,section.fix-fixed{
 .app-btn-success[state="disabled"]{
 	background-color: rgba(57, 209, 180,.3);
 	color: rgba(255,255,255,.3) !important;
+}
+
+.app-btn-success-completed{
+	color: #39d1b4 !important;
+	background-color: #fff;
+	border: 1px solid #39d1b4;
 }
 
 .app-btn-transparent{
