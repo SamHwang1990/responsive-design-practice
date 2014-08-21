@@ -21,7 +21,7 @@
                                 &#171;
                             </a>
                             <div style="position:relative;">
-                                <aside><i class="icon-home icon-white"></i> Back To Stage Home</aside>
+                                <aside><i class="icon-home icon-white"></i> Back To Stage Syllabus</aside>
                             </div>
                         </li>
                         <li class="js-dot dot" data-state="completed current">
@@ -59,7 +59,13 @@
             </article>
         </header>
         <main id="stage-detail-container">
-            <article class="stage-detail-content"></article>
+            <article class="stage-detail-content content-cards fit-full padding-top-3 margin-bottom-1">
+                <div class="fix-fixed row-fluid">
+                    <article slug="consulting-period" class="js-card card card-stage" state="active current">
+                        kjkjkj
+                    </article>
+                </div>
+            </article>
             <section class="stage-detail-controls fit-full">
                 <div class="fix-fixed row-fluid">
                     <section class="control-section span2">
@@ -74,7 +80,17 @@
                             <span exclude="desktop tablet"><i class="icon-chevron-left icon-white"></i> </span>
                         </button>
                     </section>
-                    <section class="span8"></section>
+                    <section class="control-section span8 row-fluid ">
+                        <div class="span6 row-right row-align-center alert alert-info stage-action-bar stage-action-bar_ing isShown">
+                            阶段进度已保存，但尚未完成！
+                        </div>
+                        <div class="span6 row-right row-align-center alert alert-success stage-action-bar stage-action-bar_completed">
+                            阶段已完成，要开始下一阶段啦！
+                        </div>
+                        <div class="span6 row-right row-align-center alert alert-error stage-action-bar stage-action-bar_error">
+                            保存出错了：
+                        </div>
+                    </section>
                     <section class="control-section span2">
                         <button
                                 class="stage-detail-control-next
@@ -84,15 +100,16 @@
                                 btn-round
                                 btn-fillspace
                                 card-nav card-nav-next"
-                                state="">
+                                state="disabled">
                             <ul>
                                 <li><span exclude="phone">&#10003;</span></li>
-                                <li><span exclude="phone">GOT IT</span></li>
+                                <li><span exclude="phone">SAVE IT</span></li>
                             </ul>
                             <span exclude="desktop tablet">&#10003;</span>
                             <aside class="cta" exclude="phone"><span>Please complete current card first</span></aside>
                         </button>
                     </section>
+
                 </div>
             </section>
         </main>
